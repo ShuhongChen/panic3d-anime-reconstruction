@@ -1,0 +1,22 @@
+#!/bin/bash
+
+source ./_env/project_config.bashrc
+source ./_env/machine_config.bashrc
+source ./_env/make_config.bashrc
+
+for fn in ./_env/home/.sensitive/*.bashrc; do
+    if [ -f $fn ]; then
+        . $fn
+    fi
+done
+
+
+python3 -m make.writers_experiment \
+    --trainer=$1 \
+    --machine=$2 \
+    --version=$3 \
+    --qos=$4 \
+    --gpus=$5
+
+
+

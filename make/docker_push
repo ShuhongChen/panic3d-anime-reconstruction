@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./make/_make.sh docker_push
+
+

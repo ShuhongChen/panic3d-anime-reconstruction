@@ -1,0 +1,28 @@
+Bootstrap: docker-daemon
+From: shuhongchen/panic3d-anime-reconstruction:latest
+
+
+%setup
+
+%files
+
+
+%post
+
+
+%test
+
+%environment
+    export SHELL=/bin/bash
+    export SINGULARITY_SHELL=/bin/bash
+
+%startscript
+
+%runscript
+
+
+
+
+%labels
+
+%help

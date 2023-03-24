@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# monitor gpu
+watch --no-title -n 1 "nvidia-smi; free -h"
+

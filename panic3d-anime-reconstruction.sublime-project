@@ -1,0 +1,20 @@
+{
+    "folders":
+    [
+        {
+            "path": ".",
+            "folder_exclude_patterns": [
+                "*/__pycache__",
+                "*.directory",
+                "*/.ipynb_checkpoints",
+                "*/.empty",
+                ".git/",
+                "_data/",
+                "temp/",
+                "**.pkl",
+                "*/node_modules"
+            ],
+            "follow_symlinks": true,
+        }
+    ],
+}
