@@ -72,7 +72,8 @@ RUN pip install \
 RUN pip install \
     'opencv-contrib-python==4.5.4.60'
 
-
+RUN pip install \
+    'markupsafe==2.0.1'
 
 
 

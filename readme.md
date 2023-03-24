@@ -20,6 +20,7 @@ Xiao Yang,
 Matthias Zwicker  
 CVPR2023  
 \[[github](https://github.com/ShuhongChen/panic3d-anime-reconstruction)\]
+[arxiv]
 <!-- \[[arxiv](https://arxiv.org/abs/2111.12792)\] -->
 <!-- \[[poster](./eccv2022_eisai_poster.pdf)\] -->
 <!-- \[[video](https://youtu.be/jy4HKnG9YA0)\] -->
@@ -30,9 +31,19 @@ CVPR2023
 
 ## download
 
-Downloads can be found in this drive folder: [cvpr2023_panic3d_anime_reconstruction_release](https://drive.google.com/drive/folders/1Zpt9x_OlGALi-o-TdvBPzUPcvTc7zpuV?usp=sharing)
+![](./supplementary/schematic.png)
 
-* Download `checkpoints.zip` and extract to the root project directory; the `./checkpoints/` folder should contain the `.pt` files.  Note that `./checkpoints/anime_interp_full.ckpt` is the pretrained model downloaded from [AnimeInterp](https://github.com/lisiyao21/AnimeInterp).  The checkpoints are all you need for inference.
+There are several repos related to this work, roughly laid out according to the above schematic; please follow instructions in each to download
+
+* A) [panic3d-anime-reconstruction](https://github.com/ShuhongChen/panic3d-anime-reconstruction) (this repo): reconstruction models
+* B) [vtubers-dataset](https://github.com/ShuhongChen/vtubers-dataset): download 2D data
+* C) [vroid-dataset](https://github.com/ShuhongChen/vroid-dataset): download 3D data
+* D) [animerecon-benchmark](https://github.com/ShuhongChen/animerecon-benchmark): download 2D-3D paired evaluation dataset
+* C+D) [vroid_renderer](https://github.com/ShuhongChen/vroid_renderer): convert and render 3D models
+
+For this repo, download the pretrained models from [this drive folder](https://drive.google.com/drive/folders/14p47v_dO7CULOonmeZDigMyLUQXYcm78?usp=sharing), and place in `./`
+
+<!-- Related downloads for all the above repos can be found in this drive folder: [cvpr2023_panic3d_anime_reconstruction_release](https://drive.google.com/drive/folders/1Zpt9x_OlGALi-o-TdvBPzUPcvTc7zpuV?usp=sharing) -->
 
 
 ## setup
@@ -46,6 +57,11 @@ This project requires docker with a GPU.  Run these lines from the project direc
     # OR
     make/docker_build
     make/shell_docker
+
+
+## preprocessing
+
+After the raw data is downloaded, run these lines to preprocess for reconstruction evaluation/training:
 
 
 ## evaluation
@@ -68,8 +84,6 @@ Run this line to train on RRLD-extracted data:
         ./temp/rrld_demo_output \
         ./temp/training_demo_output
 
-> Note that this script is starter code adapted from our experiments, using the same hyperparameters as our best-performing experiment.
-
 
 ## citing
 
@@ -82,7 +96,7 @@ If you use our repo, please cite our work:
         year={2023}
     }
 
-
+This repo is heavily based off the [NVlabs/eg3d](https://github.com/NVlabs/eg3d) repo; thanks to the EG3D authors for releasing their code
 
 
 
