@@ -12,10 +12,11 @@ from _databacks import lustrous_gltf_v0_measurable as uvrm
 device = torch.device('cuda')
 
 
-ap = uutil.argparse.ArgumentParser()
-ap.add_argument('name')
-args = ap.parse_args()
-inferquery = args.name
+# ap = uutil.argparse.ArgumentParser()
+# ap.add_argument('name')
+# args = ap.parse_args()
+# inferquery = args.name
+inferquery = 'ecrutileE_eclustrousC_n120-00000-000200'
 edn = f'./temp/eval/{inferquery}'
 
 

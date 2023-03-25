@@ -16,10 +16,11 @@ from _util import eg3d_metrics3d as egm
 device = torch.device('cuda')
 
 
-ap = uutil.argparse.ArgumentParser()
-ap.add_argument('name')
-args = ap.parse_args()
-inferquery = args.name
+# ap = uutil.argparse.ArgumentParser()
+# ap.add_argument('name')
+# args = ap.parse_args()
+# inferquery = args.name
+inferquery = 'ecrutileE_eclustrousC_n120-00000-000200'
 edn = f'./temp/eval/{inferquery}'
 
 

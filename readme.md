@@ -4,7 +4,7 @@
 panic3d-anime-reconstruction
 ============================
 
-<!-- ![](./supplementary/teaser.png) -->
+![](./supplementary/teaser.gif)
 
 
 **PAniC-3D: Stylized Single-view 3D Reconstruction from Portraits of Anime Characters**  
@@ -41,9 +41,7 @@ There are several repos related to this work, roughly laid out according to the 
 * D) [animerecon-benchmark](https://github.com/ShuhongChen/animerecon-benchmark): download 2D-3D paired evaluation dataset
 * C+D) [vroid_renderer](https://github.com/ShuhongChen/vroid_renderer): convert and render 3D models
 
-For this repo, download the pretrained models from [this drive folder](https://drive.google.com/drive/folders/14p47v_dO7CULOonmeZDigMyLUQXYcm78?usp=sharing), and place in `./`
-
-<!-- Related downloads for all the above repos can be found in this drive folder: [cvpr2023_panic3d_anime_reconstruction_release](https://drive.google.com/drive/folders/1Zpt9x_OlGALi-o-TdvBPzUPcvTc7zpuV?usp=sharing) -->
+All the repos add to `./_data/lustrous` and share its file structure; we recommend making a folder on a large drive, then symlinking it as `./_data/lustrous` in each repo
 
 
 ## setup
@@ -59,31 +57,32 @@ This project requires docker with a GPU.  Run these lines from the project direc
     make/shell_docker
 
 
-## preprocessing
-
-After the raw data is downloaded, run these lines to preprocess for reconstruction evaluation/training:
-
-
 ## evaluation
 
-Run this line to reproduce the best-result metrics from our paper; the output should match up to precision differences (tested on RTX 3080 Ti).
+Run this line to reproduce the best-result metrics from our paper.  There might be minor hardware variations and randomness in rendering; below are results from two different machines.
 
-    python3 -m _scripts.generate \
-    && python3 -m _scripts.measure
+    python3 -m _scripts.generate && python3 -m _scripts.measure
 
-    #  subset metric  score      
-    # ===========================
-    #  all    lpips   3.4943E-02 
-    #  all    chamfer 4.3505
+    #      RTX 3080 Ti             GTX 1080 Ti
+    #  subset metric  value    subset metric  value 
+    # ======================  ======================
+    #  front  clip   94.667    front  clip   94.659 
+    #  front  lpips  19.373    front  lpips  19.367 
+    #  front  psnr   16.914    front  psnr   16.910 
+    #  back   clip   85.046    back   clip   85.117 
+    #  back   lpips  30.017    back   lpips  30.012 
+    #  back   psnr   15.508    back   psnr   15.509 
+    #  360    clip   84.606    360    clip   84.629 
+    #  360    lpips  25.252    360    lpips  25.250 
+    #  360    psnr   15.977    360    psnr   15.976 
+    #  geom   cd      1.329    geom   cd      1.328 
+    #  geom   f1@5   37.725    geom   f1@5   38.051 
+    #  geom   f1@10  65.498    geom   f1@10  65.813 
 
 
 ## training
 
-Run this line to train on RRLD-extracted data:
-
-    python3 -m _train.frame_interpolation.train \
-        ./temp/rrld_demo_output \
-        ./temp/training_demo_output
+The training script is at `./_train/eg3dc/runs/ecrutileE_eclustrousC_n120/ecrutileE_eclustrousC_n120.sh`, which contains the command and hyperparameters used for our best model
 
 
 ## citing
@@ -91,7 +90,7 @@ Run this line to train on RRLD-extracted data:
 If you use our repo, please cite our work:
 
     @inproceedings{chen2023panic3d,
-        title={Transfer Learning for Pose Estimation of Illustrated Characters},
+        title={PAniC-3D: Stylized Single-view 3D Reconstruction from Portraits of Anime Characters},
         author={Chen, Shuhong and Zhang, Kevin and Shi, Yichun and Wang, Heng and Zhu, Yiheng and Song, Guoxian and An, Sizhe and Kristjansson, Janus and Yang, Xiao and Matthias Zwicker},
         booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
         year={2023}
