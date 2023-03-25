@@ -41,7 +41,9 @@ def rmline(img, aligndata):
             img,
             rmline_wrapper._apply_M_keypoints(
                 aligndata['transformation'],
-                aligndata['_alignment']['source']['keypoints']
+                aligndata['_alignment']['source']['keypoints'][
+                    aligndata['_alignment']['source']['_detection_used']
+                ][None,],
             )[0,:,:2],
         )
     return out
