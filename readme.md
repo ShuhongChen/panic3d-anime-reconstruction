@@ -19,12 +19,14 @@ Janus Kristjansson,
 Xiao Yang,
 Matthias Zwicker  
 CVPR2023  
-\[[github](https://github.com/ShuhongChen/panic3d-anime-reconstruction)\]
 [arxiv]
+\[[github](https://github.com/ShuhongChen/panic3d-anime-reconstruction)\]
+\[[art attrib](./supplementary/art_attributions.txt)\]
 <!-- \[[arxiv](https://arxiv.org/abs/2111.12792)\] -->
 <!-- \[[poster](./eccv2022_eisai_poster.pdf)\] -->
 <!-- \[[video](https://youtu.be/jy4HKnG9YA0)\] -->
 <!-- \[[colab](https://colab.research.google.com/github/ShuhongChen/eisai-anime-interpolator/blob/master/_notebooks/eisai_colab_demo.ipynb)\]   -->
+
 
 *We propose PAniC-3D, a system to reconstruct stylized 3D character heads directly from illustrated (p)ortraits of (ani)me (c)haracters.  Our anime-style domain poses unique challenges to single-view reconstruction; compared to natural images of human heads, character portrait illustrations have hair and accessories with more complex and diverse geometry, and are shaded with non-photorealistic contour lines.  In addition, there is a lack of both 3D model and portrait illustration data suitable to train and evaluate this ambiguous stylized reconstruction task.  Facing these challenges, our proposed PAniC-3D architecture crosses the illustration-to-3D domain gap with a line-filling model, and represents sophisticated geometries with a volumetric radiance field.  We train our system with two large new datasets (11.2k Vroid 3D models, 1k Vtuber portrait illustrations), and evaluate on a novel AnimeRecon benchmark of illustration-to-3D pairs.  PAniC-3D significantly outperforms baseline methods, and provides data to establish the task of stylized reconstruction from portrait illustrations.*
 
