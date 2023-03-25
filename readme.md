@@ -31,6 +31,15 @@ CVPR2023
 *We propose PAniC-3D, a system to reconstruct stylized 3D character heads directly from illustrated (p)ortraits of (ani)me (c)haracters.  Our anime-style domain poses unique challenges to single-view reconstruction; compared to natural images of human heads, character portrait illustrations have hair and accessories with more complex and diverse geometry, and are shaded with non-photorealistic contour lines.  In addition, there is a lack of both 3D model and portrait illustration data suitable to train and evaluate this ambiguous stylized reconstruction task.  Facing these challenges, our proposed PAniC-3D architecture crosses the illustration-to-3D domain gap with a line-filling model, and represents sophisticated geometries with a volumetric radiance field.  We train our system with two large new datasets (11.2k Vroid 3D models, 1k Vtuber portrait illustrations), and evaluate on a novel AnimeRecon benchmark of illustration-to-3D pairs.  PAniC-3D significantly outperforms baseline methods, and provides data to establish the task of stylized reconstruction from portrait illustrations.*
 
 
+## talking head demo
+
+inputs            |  outputs
+:-------------------------:|:-------------------------:
+![](./supplementary/talking_head_inputs.png)  |  ![](./supplementary/talking_head_demo.gif)
+
+A talking head demo is available in the project's [drive folder](https://drive.google.com/drive/folders/1Zpt9x_OlGALi-o-TdvBPzUPcvTc7zpuV?usp=share_link).  We extend PAniC-3D to provide a 3D talking head from a single portrait illustration.  The mesh is extracted with normals through marching cubes, and we manually place two bones with linear blend skinning (this maybe automated with [RigNet](https://zhan-xu.github.io/rig-net/), etc.).  Instead of making texture maps, we render the positions and normals of intersections, which are then used as rays to query our radiance field.  In order to perform expression changes, we incorporate [talking-head-anime-2](https://github.com/pkhungurn/talking-head-anime-2-demo) to change the texture.
+
+
 ## download
 
 ![](./supplementary/schematic.png)
