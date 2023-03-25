@@ -68,7 +68,8 @@ After the raw data is downloaded, run these lines to preprocess for reconstructi
 
 Run this line to reproduce the best-result metrics from our paper; the output should match up to precision differences (tested on RTX 3080 Ti).
 
-    python3 -m _scripts.evaluate
+    python3 -m _scripts.generate \
+    && python3 -m _scripts.measure
 
     #  subset metric  score      
     # ===========================
