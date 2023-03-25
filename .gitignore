@@ -48,4 +48,5 @@ var_tmp/
 **/slurm-*
 **/lightning_logs
 **/slurm
+**/runs
 
