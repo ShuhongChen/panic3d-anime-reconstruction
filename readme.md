@@ -19,10 +19,9 @@ Janus Kristjansson,
 Xiao Yang,
 Matthias Zwicker  
 CVPR2023  
-[arxiv]
+\[[arxiv](https://arxiv.org/abs/2303.14587)\]
 \[[github](https://github.com/ShuhongChen/panic3d-anime-reconstruction)\]
 \[[art attrib](./supplementary/art_attributions.txt)\]
-<!-- \[[arxiv](https://arxiv.org/abs/2111.12792)\] -->
 <!-- \[[poster](./eccv2022_eisai_poster.pdf)\] -->
 <!-- \[[video](https://youtu.be/jy4HKnG9YA0)\] -->
 <!-- \[[colab](https://colab.research.google.com/github/ShuhongChen/eisai-anime-interpolator/blob/master/_notebooks/eisai_colab_demo.ipynb)\]   -->
