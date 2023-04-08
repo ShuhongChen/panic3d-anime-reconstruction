@@ -73,7 +73,7 @@ This project requires docker with a GPU.  Run these lines from the project direc
 
 Run this line to reproduce the best-result metrics from our paper.  There might be minor hardware variations and randomness in rendering; below are results from two different machines.
 
-    python3 -m _scripts.generate && python3 -m _scripts.measure
+    python3 -m _scripts.eval.generate && python3 -m _scripts.eval.measure
 
     #      RTX 3080 Ti             GTX 1080 Ti
     #  subset metric  value    subset metric  value 
