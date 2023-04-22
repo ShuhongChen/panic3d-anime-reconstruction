@@ -43,7 +43,7 @@ A talking head demo is available in the project's [drive folder](https://drive.g
 
 ![](./supplementary/schematic.png)
 
-Download the `panic3d-anime-reconstruction.zip` from the project's [drive folder](https://drive.google.com/drive/folders/1Zpt9x_OlGALi-o-TdvBPzUPcvTc7zpuV?usp=share_link), and merge it with this repo's file structure.
+Download the `panic_data_models_merged.zip` from the project's [drive folder](https://drive.google.com/drive/folders/1Zpt9x_OlGALi-o-TdvBPzUPcvTc7zpuV?usp=share_link), and merge it with this repo's file structure.
 
 There are several repos related to this work, roughly laid out according to the above schematic; please follow instructions in each to download
 
