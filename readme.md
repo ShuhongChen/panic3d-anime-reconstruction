@@ -1,4 +1,20 @@
+python3 -m _scripts.eval.generate && python3 -m _scripts.eval.measure
 
+#      RTX 3080 Ti             GTX 1080 Ti
+#  subset metric  value    subset metric  value 
+# ======================  ======================
+#  front  clip   94.667    front  clip   94.659 
+#  front  lpips  19.373    front  lpips  19.367 
+#  front  psnr   16.914    front  psnr   16.910 
+#  back   clip   85.046    back   clip   85.117 
+#  back   lpips  30.017    back   lpips  30.012 
+#  back   psnr   15.508    back   psnr   15.509 
+#  360    clip   84.606    360    clip   84.629 
+#  360    lpips  25.252    360    lpips  25.250 
+#  360    psnr   15.977    360    psnr   15.976 
+#  geom   cd      1.329    geom   cd      1.328 
+#  geom   f1@5   37.725    geom   f1@5   38.051 
+#  geom   f1@10  65.498    geom   f1@10  65.813 
 
 
 panic3d-anime-reconstruction
